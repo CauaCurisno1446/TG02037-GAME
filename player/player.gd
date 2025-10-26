@@ -1,5 +1,12 @@
 extends CharacterBody3D
 
+#Play 'Cessa'
+@onready var audio_player: AudioStreamPlayer3D = $SoundCessa
+func _input(event):
+	if event.is_action_pressed("play_cessa"):
+		if audio_player:
+			audio_player.play()
+
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -9,6 +16,7 @@ func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
 
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
@@ -26,3 +34,4 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 
 	move_and_slide()
+	

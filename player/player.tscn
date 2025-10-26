@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dieeu5hvilabi"]
+[gd_scene load_steps=6 format=3 uid="uid://dieeu5hvilabi"]
 
 [ext_resource type="Script" uid="uid://crnx7jwdynolg" path="res://player/player.gd" id="1_oul6g"]
 [ext_resource type="Script" uid="uid://bsfi72224w114" path="res://player/fp_cam.gd" id="2_rkbax"]
+[ext_resource type="AudioStream" uid="uid://dfx1k5oks3l1k" path="res://sounds/cessa.ogg" id="3_g1dw6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kqu6x"]
 
@@ -21,3 +22,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.008927494, 0.6706031, -0.2
 script = ExtResource("2_rkbax")
 
 [node name="Camera3D" type="Camera3D" parent="head"]
+
+[node name="SoundCessa" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_g1dw6")
