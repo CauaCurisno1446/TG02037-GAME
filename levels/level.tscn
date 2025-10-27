@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c2ex5qcilxr81"]
+[gd_scene load_steps=10 format=3 uid="uid://c2ex5qcilxr81"]
 
 [ext_resource type="Texture2D" uid="uid://26405fd82wwu" path="res://icon.svg" id="1_80vhd"]
 [ext_resource type="PackedScene" uid="uid://dieeu5hvilabi" path="res://player/player.tscn" id="2_hjsbj"]
+[ext_resource type="PackedScene" uid="uid://do3poh1wvwrfe" path="res://models/obj/obj_Academia.gltf" id="3_cwqvt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hjsbj"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -41,8 +42,11 @@ material_override = SubResource("StandardMaterial3D_cwqvt")
 mesh = SubResource("BoxMesh_5mrsh")
 
 [node name="player" parent="." instance=ExtResource("2_hjsbj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8967533, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9029102, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.6965345, -0.7000284, 0.15747972, 0.14644662, 0.35355338, 0.9238795, -0.7024194, -0.62045157, 0.34877893, 0, 9.148136, 0)
 shadow_enabled = true
+
+[node name="blockbench_export" parent="." instance=ExtResource("3_cwqvt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014754295, 0.5, 3.3063927)
